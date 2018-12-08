@@ -1,4 +1,0 @@
-ch_index	ch_id	ch_name	ch_shop	ch_sh	ch_speed	ch_hp	ch_spu	ch_price	ch_txt
-1	1	Aegis	1	1	8	100	5	1000	"팀의 방패를 책임진다. 인간 방패 이지스!,"
-2	2	Apollo	1	-1	8	150	5	1000	엄청난 훈련으로 근육을 극대화한 남자다. 상당한 체력을 가지고 있다.
-3	3	Plain	1	-1	8	100	5	-1	"평범한 시민이었지만, 피나는 노력으로 레지스탕스의 일원이 되었다."
