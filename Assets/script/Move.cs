@@ -12,6 +12,7 @@ public class Move : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Ch_Move();
+        Limit();
 	}
      void Ch_Move()
     {
@@ -23,5 +24,13 @@ public class Move : MonoBehaviour {
             movevelocity = Vector3.right;
 
         transform.position += movevelocity * Speed * Time.deltaTime;
+    }
+     void Limit()
+    {
+        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+
+        pos.x = Mathf.Clamp01(pos.x);
+        transform.position = Camera.main.ViewportToWorldPoint(pos);
+
     }
 }
