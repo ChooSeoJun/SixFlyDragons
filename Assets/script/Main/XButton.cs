@@ -7,5 +7,6 @@ public class XButton : MonoBehaviour {
     public void Click() // X를 클릭했을 때
     {
         Page.SetActive(false);
+        Global.pg_use = false;
     }
 }
