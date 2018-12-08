@@ -19,12 +19,12 @@ public class Back_Ground : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            offset += 0.3f*Time.deltaTime;
+            offset += 0.3f*Time.deltaTime*scrollSpeed;
             renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
         }    
         else if (Input.GetKey(KeyCode.LeftArrow))
           {
-            offset -= 0.3f*Time.deltaTime;
+            offset -= 0.3f*Time.deltaTime * scrollSpeed;
             renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
             
         }   
