@@ -9,7 +9,7 @@ public class Cchar_Mgr : MonoBehaviour {
     static int i = 0;
 	// Use this for initialization
 	void Awake () {
-        ChangeCH.a = 1;
+        Global.pg = 1;
         List<Dictionary<string, object>> charData = CSVReader.Read("CSV/char1csv");//캐릭터CSV 데이터를 charData 에 넣어준다           
         for(;i<3;i++)
         {

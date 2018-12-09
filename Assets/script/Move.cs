@@ -4,32 +4,36 @@ using UnityEngine;
 
 public class Move : MonoBehaviour {
     public float Speed = 0f;
+    Vector2 MoveVelocity; 
+    Rigidbody2D rigid;   
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
+        rigid = GetComponent<Rigidbody2D>();
+    }	
 	// Update is called once per frame
 	void Update () {
         Ch_Move();
- 
-	}
-     void Ch_Move()
+        Limit();
+
+    }void FixedUpdate()
     {
-        Vector3 movevelocity = Vector3.zero;
-
-        if (Input.GetAxisRaw("Horizontal") < 0)
-            movevelocity = Vector3.left;
-        else if (Input.GetAxisRaw("Horizontal") > 0)
-            movevelocity = Vector3.right;
-
-        transform.position += movevelocity * Speed * Time.deltaTime;
+        rigid.MovePosition(rigid.position + MoveVelocity * Time.fixedDeltaTime);
+    }
+    void Ch_Move()
+    {
         
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
+
+        MoveVelocity = moveInput.normalized * Speed;
+
     }
      void Limit()
     {
-        Vector2 pos;
+        Vector3 pos = Vector3.zero;
         pos.x = Mathf.Clamp(transform.position.x, -5.5f, 5.5f);
+        pos.y = Mathf.Clamp(transform.position.y, -4, -1);
+
+        transform.position = pos;
 
     }
 }
