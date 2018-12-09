@@ -11,9 +11,15 @@ public class SoundOption : MonoBehaviour
     public AudioSource BGM;
     public AudioSource Effect;
 
-    public Text bgmWhat;
-    public Text effectWhat;
+    public Button bgmWhat;
+    public Button effectWhat;
 
+    public Image on;
+    public Image off;
+
+    public Image option;
+
+    
 
     public void playSoundEffect(string snd) {
        if (playEffect)
@@ -35,22 +41,29 @@ public class SoundOption : MonoBehaviour
 
     }
 
+    public void OpenOption() {
+        option.gameObject.SetActive(true);
+    }
 
-  
+    public void exitOption() {
+        option.gameObject.SetActive(false);
+    }
+
     void Update()
     {
         BGM.gameObject.SetActive(playBGM);
         Effect.gameObject.SetActive(playEffect);
 
-        if (playEffect)
-            effectWhat.text = "효과음 : on";
-        else
-            effectWhat.text = "효과음 : off";
-
         if (playBGM)
-            bgmWhat.text = "배경음 : on";
+            bgmWhat.image.sprite = on.sprite;
         else
-            bgmWhat.text = "배경음 : off";
+            bgmWhat.image.sprite = off.sprite;
+
+        if (playEffect)
+            effectWhat.image.sprite = on.sprite;
+        else
+            effectWhat.image.sprite = off.sprite;
+
     }
 
 
