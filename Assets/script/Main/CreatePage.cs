@@ -17,6 +17,10 @@ public class CreatePage : MonoBehaviour {
 
     public void Click()
     {
-        Page.SetActive(true);
+        if(Global.pg_use == false)
+        { 
+            Page.SetActive(true);
+            Global.pg_use = true;
+        }
     }
 }

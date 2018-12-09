@@ -18,7 +18,7 @@ public class CChar_EQ_Mgr : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
-        ChangeCH.a = 1;
+        Global.pg = 1;
         List<Dictionary<string, object>> eqData = CSVReader.Read("CSV/NarshaProject"); // CSV를 읽어옴
 
         for (; i < 16; i++) // CSV값을 eq 리스트에 저장
