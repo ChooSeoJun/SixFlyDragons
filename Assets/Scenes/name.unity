@@ -579,8 +579,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -171.06996, y: -118.45}
-  m_SizeDelta: {x: 200, y: 126.5}
+  m_AnchoredPosition: {x: -259, y: -129}
+  m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519492906
 MonoBehaviour:
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2063104455}
+      - m_Target: {fileID: 2063104457}
         m_MethodName: clickCheck
         m_Mode: 1
         m_Arguments:
@@ -769,8 +769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011742, y: 1.14}
-  m_SizeDelta: {x: 542.14, y: 60.64}
+  m_AnchoredPosition: {x: 0.000011444, y: 3.945}
+  m_SizeDelta: {x: 603.5, y: 115.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829780698
 MonoBehaviour:
@@ -792,12 +792,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3c4194a51363ee5429450de8beb3cfc4, type: 3}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: 2f0390472305fa64ba3bd9d58947d25b, type: 3}
+    m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2063104455}
+      - m_Target: {fileID: 2063104457}
         m_MethodName: OnChangeNick
         m_Mode: 1
         m_Arguments:
@@ -1255,8 +1255,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000024796, y: -0.000024796}
-  m_SizeDelta: {x: 1306, y: 1254.3}
+  m_AnchoredPosition: {x: 0, y: 1.14}
+  m_SizeDelta: {x: 2080, y: 2040}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600067489
 MonoBehaviour:
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2063104455}
+      - m_Target: {fileID: 2063104457}
         m_MethodName: DeleteInput
         m_Mode: 1
         m_Arguments:
@@ -1668,8 +1668,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165, y: -118.45001}
-  m_SizeDelta: {x: 293.6, y: 126.5}
+  m_AnchoredPosition: {x: 225, y: -129}
+  m_SizeDelta: {x: 450, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928354672
 MonoBehaviour:
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2063104455}
+      - m_Target: {fileID: 2063104457}
         m_MethodName: clickNo
         m_Mode: 1
         m_Arguments:
@@ -1870,6 +1870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063104456}
   - component: {fileID: 2063104455}
+  - component: {fileID: 2063104457}
   m_Layer: 0
   m_Name: InputProcessor
   m_TagString: Untagged
@@ -1888,15 +1889,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead0e9a84a89d114ca23115cb5749aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputfieldNick: {fileID: 59287007}
-  inputfield: {fileID: 57436784}
-  smile: {fileID: 1101229484}
-  frown: {fileID: 712108540}
-  impos: {fileID: 1470903506}
-  reinfo: {fileID: 1600067489}
-  nick: {fileID: 829780698}
-  check: {fileID: 519492906}
-  no: {fileID: 1928354672}
 --- !u!4 &2063104456
 Transform:
   m_ObjectHideFlags: 0
@@ -1910,3 +1902,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2063104457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063104454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7486e33921aed904e86d1e8dec98c482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputfieldNick: {fileID: 59287007}
+  inputfield: {fileID: 57436784}
+  smile: {fileID: 1101229484}
+  frown: {fileID: 712108540}
+  impos: {fileID: 1470903506}
+  reinfo: {fileID: 1600067489}
+  nick: {fileID: 829780698}
+  check: {fileID: 519492906}
+  no: {fileID: 1928354672}
