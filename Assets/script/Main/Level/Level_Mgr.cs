@@ -17,7 +17,6 @@ public class Level_Mgr : MonoBehaviour {
             l.level = (int)lvData[i]["Level"];
             l.level_value = (int)lvData[i]["Level_Value"];
 
-
             lv.Add(l); // i번째 줄에서 읽어들인 값을 lv에 추가
         }
     }

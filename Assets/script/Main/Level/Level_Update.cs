@@ -14,7 +14,6 @@ public class Level_Update : MonoBehaviour {
         Level_text.text = Global.exp.ToString();
         foreach (Level l in Level_Mgr.lv)
         {
-            Debug.Log(l.level);
             if(l.level == Global.exp)
             {
                 if (l.level_value <= Global.exp_value)
