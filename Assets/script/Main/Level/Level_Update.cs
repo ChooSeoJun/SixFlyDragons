@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Level_Update : MonoBehaviour {
     public Text Level_text;
+    public GameObject Level_Show;
     // Use this for initialization
     void Start () {
 
@@ -21,6 +22,7 @@ public class Level_Update : MonoBehaviour {
                     Global.exp++;
                     Global.exp_value -= l.level_value;
                 }
+                Level_Show.GetComponent<Image>().fillAmount = (float)Global.exp_value / (float)l.level_value;
             }
         }
 
