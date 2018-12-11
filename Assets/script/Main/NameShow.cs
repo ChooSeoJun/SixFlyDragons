@@ -8,6 +8,4 @@ public class NameShow : MonoBehaviour {
     void Start () {
         name_text.text = InputProcessor.UserNick.ToString();
     }
-	
-
 }
