@@ -17,4 +17,8 @@ public class aa : MonoBehaviour {
     {
         Global.stage++;
     }
+    public void LevelClick()
+    {
+        Global.exp_value = 2000;
+    }
 }
