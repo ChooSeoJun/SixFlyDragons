@@ -17,20 +17,24 @@ public class Back_Ground : MonoBehaviour {
 	void FixedUpdate () {
 
         //offset = Time.time*scrollSpeed;
-        if (offset<=end)
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (offset <= end)
         {
-            offset += 0.3f*Time.deltaTime*scrollSpeed;
-            renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
-        }    
-        if(offset>=0)
-        if (Input.GetKey(KeyCode.LeftArrow))
-          {
-            offset -= 0.3f*Time.deltaTime * scrollSpeed;
-            renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
-            
-        }   
-        
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                offset += 0.3f * Time.deltaTime * scrollSpeed;
+                renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+            }
+        }
+
+        if (offset >= 0)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                offset -= 0.3f * Time.deltaTime * scrollSpeed;
+                renderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+
+            }
+        }
         
        
 
