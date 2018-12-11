@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class Level_Show : MonoBehaviour {
-    public Text Level_text;
+public class NameShow : MonoBehaviour {
+    public Text name_text;
     // Use this for initialization
     void Start () {
-        Level_text.text = Global.exp.ToString();
+        name_text.text = InputProcessor.UserNick.ToString();
     }
 }
