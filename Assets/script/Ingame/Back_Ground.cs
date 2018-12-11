@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Back_Ground : MonoBehaviour {
+    public float end = 0f;
     private new Renderer renderer;
     public float scrollSpeed = 0f;
     public float offset = 0f;
@@ -13,9 +14,10 @@ public class Back_Ground : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () { 
-            
+	void FixedUpdate () {
+
         //offset = Time.time*scrollSpeed;
+        if (offset<=end)
         if (Input.GetKey(KeyCode.RightArrow))
         {
             offset += 0.3f*Time.deltaTime*scrollSpeed;

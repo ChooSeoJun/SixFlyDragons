@@ -25,9 +25,6 @@ public class Move : MonoBehaviour {
 	void Update () {
         Ch_Move();
         Limit();
-        Debug.Log(Cchar_Mgr.ch[0].ch_use);
-        Debug.Log(Cchar_Mgr.ch[1].ch_use);
-        Debug.Log(Cchar_Mgr.ch[2].ch_use);
     }
     void FixedUpdate()
     {
