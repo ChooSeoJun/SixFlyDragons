@@ -39,24 +39,21 @@ public class Cchar_Mgr : MonoBehaviour {
     void Update () {
         if(ch[0].ch_use==true)
         {
-           texts[0].text = "name:" + ch[2].ch_name;
-            texts[1].text = "Speed:" + ch[2].ch_speed.ToString();
-            texts[2].text = "Hp:" + ch[2].ch_hp.ToString();
-            texts[3].text = "설명:"+ch[2].ch_txt;
+            texts[1].text = ch[2].ch_speed.ToString();
+            texts[2].text = ch[2].ch_hp.ToString();
+            texts[3].text = ch[2].ch_txt;
         }
         else if(ch[1].ch_use == true)
         {
-            texts[0].text = "name:"+ch[1].ch_name;
-            texts[1].text = "Speed:"+ch[1].ch_speed.ToString();
-            texts[2].text = "Hp:"+ch[1].ch_hp.ToString();
-            texts[3].text = "설명:"+ch[1].ch_txt;
+            texts[1].text = ch[1].ch_speed.ToString();
+            texts[2].text = ch[1].ch_hp.ToString();
+            texts[3].text = ch[1].ch_txt;
         }
        else if (ch[2].ch_use == true)
         {
-            texts[0].text = "name:" + ch[0].ch_name;
-            texts[1].text = "Speed:" + ch[0].ch_speed.ToString();
-            texts[2].text = "Hp:" + ch[0].ch_hp.ToString();
-            texts[3].text = "설명:"+ch[0].ch_txt;
+            texts[1].text = ch[0].ch_speed.ToString();
+            texts[2].text = ch[0].ch_hp.ToString();
+            texts[3].text = ch[0].ch_txt;
         }
 
     }

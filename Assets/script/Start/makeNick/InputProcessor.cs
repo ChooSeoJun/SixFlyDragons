@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class InputProcessor : MonoBehaviour {
     public static String UserNick;
@@ -65,6 +66,9 @@ public class InputProcessor : MonoBehaviour {
         UserNick = inputfieldNick.text;
 
         Debug.Log(UserNick);
+        int stageLavel = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(stageLavel + 1);
+
     }
 
 	bool SpecialChar(){

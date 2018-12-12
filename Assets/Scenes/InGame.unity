@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788acfc2ee8779448b3e24b3014838da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  end: 0.4
   scrollSpeed: 0.025
   offset: 0
 --- !u!64 &89055419
@@ -340,8 +341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: -0.7000122, y: 2.7999992}
+  m_SizeDelta: {x: 1.599967, y: 5.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872612501
 MonoBehaviour:
@@ -355,15 +356,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a45184271001e0a4895268de06e20ced, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -388,6 +389,7 @@ GameObject:
   - component: {fileID: 907697336}
   - component: {fileID: 907697338}
   - component: {fileID: 907697339}
+  - component: {fileID: 907697340}
   m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
@@ -466,6 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
+  HpBar: {fileID: 1995007961}
 --- !u!50 &907697339
 Rigidbody2D:
   serializedVersion: 4
@@ -486,6 +489,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &907697340
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907697335}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.54231524, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.16, y: 19.16}
+    newSize: {x: 19.16, y: 19.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.001436, y: 19.16}
+  m_EdgeRadius: 0
 --- !u!1 &1511497755
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,8 +545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 35, y: 6.5}
+  m_SizeDelta: {x: 86.2, y: -16.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1512456425
 GameObject:
@@ -612,8 +640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -4.999878, y: 0}
+  m_SizeDelta: {x: -10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1915998938
 GameObject:
@@ -701,8 +729,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1995007960}
   - component: {fileID: 1995007961}
+  - component: {fileID: 1995007962}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: HpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -726,8 +755,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 582.8, y: -71.3}
-  m_SizeDelta: {x: 1067.1, y: 142.5}
+  m_AnchoredPosition: {x: 710.4, y: -113}
+  m_SizeDelta: {x: 1083.3, y: 156.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1995007961
 MonoBehaviour:
@@ -769,14 +798,36 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1995007962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1995007959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -594688902, guid: f7b54ff4a43d4fcf81b4538b678e0bcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SurfaceParent: {fileID: 0}
+  m_FreezeUpdates: 0
+  m_VolumeType: 1
+  m_SphereRadius: 2
+  m_HalfBoxExtents: {x: 4, y: 4, z: 4}
+  m_LodType: 1
+  m_NumUpdatesBeforeRemoval: 10
+  m_SecondsBetweenUpdates: 2.5
+  m_CurrentRenderState: 1
+  m_VisualMaterial: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  m_OcclusionMaterial: {fileID: 15302, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &2032209912
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788acfc2ee8779448b3e24b3014838da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  end: 15
   scrollSpeed: 1
   offset: 0
 --- !u!64 &2053608676
@@ -938,8 +990,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -14.900024, y: 8.4}
+  m_SizeDelta: {x: 203.2, y: 39.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074693043
 MonoBehaviour:
@@ -960,8 +1012,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 3971475846386c441ab6bb487d331670, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

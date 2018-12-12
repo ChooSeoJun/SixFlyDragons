@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class HpBar : MonoBehaviour {
+using UnityEngine.SceneManagement;
+public class cccc : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,4 +13,10 @@ public class HpBar : MonoBehaviour {
 	void Update () {
 		
 	}
+    public void STAGE1()
+    {
+        SceneManager.LoadScene(3);
+    }
+        
+
 }
