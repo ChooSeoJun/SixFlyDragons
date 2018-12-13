@@ -42,7 +42,7 @@ public class Move : MonoBehaviour {
     {
         Vector3 pos = Vector3.zero;
         pos.x = Mathf.Clamp(transform.position.x, -5.5f, 5.5f);
-        pos.y = Mathf.Clamp(transform.position.y, -4, -1);
+        pos.y = Mathf.Clamp(transform.position.y, -4, 2);
 
         transform.position = pos;
 
