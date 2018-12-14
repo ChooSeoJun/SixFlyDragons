@@ -28,13 +28,11 @@ public class InputProcessor : MonoBehaviour {
                         "게임마스터", "GM","겜마", "개발자","운영자","운영","영자",};
     
 	public void DeleteInput(){
-		//Debug.Log ("asdf DELDELTLELE");
         inputfield.Select();
         inputfield.text = "";
 	}
 
 	public void OnChangeNick(){
-		Debug.Log ("OnChangeNick Clicked");
 
         bool temp = nickNameOk;
         impos.gameObject.SetActive(!nickNameOk);
@@ -65,14 +63,12 @@ public class InputProcessor : MonoBehaviour {
 
         UserNick = inputfieldNick.text;
 
-        Debug.Log(UserNick);
         int stageLavel = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(stageLavel + 1);
 
     }
 
 	bool SpecialChar(){
-		//Debug.Log ("sChar launched");
 		for (int i = 0; i < inputfieldNick.text.Length; i++) {
 			if (!((inputfieldNick.text [i] >= 44032 && inputfieldNick.text [i] <= 55295) ||		//한글
 				(inputfieldNick.text [i] >= '0' && inputfieldNick.text [i] <= '9') ||			//숫자									//이 for문은 특수문자를 거르기 위함.
@@ -86,7 +82,6 @@ public class InputProcessor : MonoBehaviour {
 	}
 
 	bool HaveYok(){
-		//Debug.Log ("haveYok launched");
 		for (int i = 0; i < filter.Length; i++) {
 			if (inputfieldNick.text.Contains(filter[i])) {
 				return true;
@@ -96,7 +91,6 @@ public class InputProcessor : MonoBehaviour {
 	}
 
 	bool WhatByte(){
-		//Debug.Log ("whatByte launched");
 		int Byte = 0;
 		for (int j = 0; j < inputfieldNick.text.Length; j++) {
 			if ((inputfieldNick.text [j] >= 'a' && inputfieldNick.text [j] <= 'z') || 
@@ -116,7 +110,6 @@ public class InputProcessor : MonoBehaviour {
 
 	void Update(){
 		nickNameOk = ! HaveYok() && ! SpecialChar() && ! WhatByte();				//셋다 false 여야 정상이기때문에 NAND사용.
-		Debug.Log(nickNameOk);
 		smile.gameObject.SetActive (nickNameOk);
 		frown.gameObject.SetActive (!nickNameOk);
 	}
