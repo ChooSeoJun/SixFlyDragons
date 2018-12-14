@@ -5,6 +5,7 @@ using UnityEngine;
 public class CreatePage : MonoBehaviour {
 
     public GameObject Page;
+    public int a;
     // Use this for initialization
     void Start () {
 		
@@ -17,7 +18,7 @@ public class CreatePage : MonoBehaviour {
 
     public void Click()
     {
-        if(Global.pg_use == false)
+        if(Global.pg_use == false || a == 1)
         { 
             Page.SetActive(true);
             Global.pg_use = true;

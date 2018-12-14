@@ -1,15 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 public class Cchar_Mgr : MonoBehaviour {
     public static List<Ccharacter> ch = new List<Ccharacter>();
-    public Text[] texts;
     
     static int i = 0;
 	// Use this for initialization
 	void Awake () {
-        Global.pg = 1;
         List<Dictionary<string, object>> charData = CSVReader.Read("CSV/char1csv");//캐릭터CSV 데이터를 charData 에 넣어준다           
         for(;i<3;i++)
         {
@@ -27,35 +24,6 @@ public class Cchar_Mgr : MonoBehaviour {
             ch.Add(c);
         }
         
-    }
-
-     void Start()
-    {
-       texts = GetComponent<Text[]>();        
-    }
-
-
-    // Update is called once per frame
-    void Update () {
-        if(ch[0].ch_use==true)
-        {
-            texts[1].text = ch[2].ch_speed.ToString();
-            texts[2].text = ch[2].ch_hp.ToString();
-            texts[3].text = ch[2].ch_txt;
-        }
-        else if(ch[1].ch_use == true)
-        {
-            texts[1].text = ch[1].ch_speed.ToString();
-            texts[2].text = ch[1].ch_hp.ToString();
-            texts[3].text = ch[1].ch_txt;
-        }
-       else if (ch[2].ch_use == true)
-        {
-            texts[1].text = ch[0].ch_speed.ToString();
-            texts[2].text = ch[0].ch_hp.ToString();
-            texts[3].text = ch[0].ch_txt;
-        }
-
     }
     
 }
