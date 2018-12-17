@@ -379,6 +379,7 @@ GameObject:
   - component: {fileID: 255835435}
   - component: {fileID: 255835434}
   - component: {fileID: 255835437}
+  - component: {fileID: 255835438}
   m_Layer: 5
   m_Name: Stage_2
   m_TagString: Untagged
@@ -442,7 +443,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 255835435}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 255835438}
+        m_MethodName: Stage_choose
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 255835434}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &255835435
@@ -491,6 +503,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage: 2
+--- !u!114 &255835438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 255835432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa023f6d393a974c925b0c34d53c813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 255835434}
 --- !u!1 &344873355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1942425614369298, guid: 918505219258a8841ac53cf469d4f584,
@@ -872,6 +896,7 @@ GameObject:
   - component: {fileID: 529040478}
   - component: {fileID: 529040477}
   - component: {fileID: 529040476}
+  - component: {fileID: 529040479}
   m_Layer: 5
   m_Name: Stage_1
   m_TagString: Untagged
@@ -935,7 +960,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 529040477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 529040479}
+        m_MethodName: Stage_choose
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 529040476}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &529040477
@@ -972,6 +1008,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529040474}
   m_CullTransparentMesh: 0
+--- !u!114 &529040479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529040474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa023f6d393a974c925b0c34d53c813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 529040476}
 --- !u!1 &534668478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,6 +1598,7 @@ GameObject:
   - component: {fileID: 754860335}
   - component: {fileID: 754860334}
   - component: {fileID: 754860337}
+  - component: {fileID: 754860338}
   m_Layer: 5
   m_Name: Stage_5
   m_TagString: Untagged
@@ -1613,7 +1662,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 754860335}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 754860338}
+        m_MethodName: Stage_choose
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 754860334}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &754860335
@@ -1662,6 +1722,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage: 5
+--- !u!114 &754860338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 754860332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa023f6d393a974c925b0c34d53c813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 754860334}
 --- !u!1 &760582491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,6 +2778,7 @@ GameObject:
   - component: {fileID: 1057051726}
   - component: {fileID: 1057051725}
   - component: {fileID: 1057051728}
+  - component: {fileID: 1057051729}
   m_Layer: 5
   m_Name: Stage_4
   m_TagString: Untagged
@@ -2769,7 +2842,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1057051726}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1057051729}
+        m_MethodName: Stage_choose
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1057051725}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1057051726
@@ -2818,6 +2902,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage: 4
+--- !u!114 &1057051729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1057051723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa023f6d393a974c925b0c34d53c813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1057051725}
 --- !u!1 &1104601147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3502,6 +3598,7 @@ GameObject:
   - component: {fileID: 1620156622}
   - component: {fileID: 1620156621}
   - component: {fileID: 1620156624}
+  - component: {fileID: 1620156625}
   m_Layer: 5
   m_Name: Stage_3
   m_TagString: Untagged
@@ -3565,7 +3662,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1620156622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1620156625}
+        m_MethodName: Stage_choose
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1620156621}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1620156622
@@ -3614,6 +3722,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage: 3
+--- !u!114 &1620156625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1620156619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa023f6d393a974c925b0c34d53c813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1620156621}
 --- !u!1 &1624142023
 GameObject:
   m_ObjectHideFlags: 0

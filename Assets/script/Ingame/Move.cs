@@ -12,14 +12,20 @@ public class Move : MonoBehaviour {
 	void Start () {
         rigid = GetComponent<Rigidbody2D>();
         if (Cchar_Mgr.ch[0].ch_use == true)
+        {
             HpBar.maxValue = Cchar_Mgr.ch[0].ch_hp;
+            HpBar.value = Cchar_Mgr.ch[0].ch_hp;
+        }
         else if (Cchar_Mgr.ch[1].ch_use == true)
         {
             HpBar.maxValue = Cchar_Mgr.ch[1].ch_hp;
             HpBar.value = Cchar_Mgr.ch[1].ch_hp;
         }
         else if (Cchar_Mgr.ch[2].ch_use == true)
+        {
             HpBar.maxValue = Cchar_Mgr.ch[2].ch_hp;
+            HpBar.value = Cchar_Mgr.ch[2].ch_hp;
+        }
     }	
 	// Update is called once per frame
 	void Update () {
