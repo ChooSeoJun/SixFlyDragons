@@ -343,6 +343,10 @@ Prefab:
       propertyPath: bullet_speed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1790048972192960, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
   m_IsPrefabAsset: 0
@@ -482,7 +486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1437252442
 Transform:
   m_ObjectHideFlags: 0
@@ -912,7 +916,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   end: 15
-  scrollSpeed: 1
   offset: 0
 --- !u!64 &2053608676
 MeshCollider:

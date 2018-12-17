@@ -11,6 +11,7 @@ public class Create_Bullet : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+        rigidbody = GetComponent<Rigidbody>();
         StartCoroutine(CreateBullet());
 	}
 	
@@ -20,12 +21,10 @@ public class Create_Bullet : MonoBehaviour {
 	}
     IEnumerator CreateBullet()
     {
-        while(true)
-        {
-            Instantiate(Bullet,create_position.transform.position,Quaternion.identity);
+        while (true) { 
+        Instantiate(Bullet, create_position.transform.position, Quaternion.identity);
             Vector3 Dir = (target.transform.position - Bullet.transform.position).normalized;
-            Bullet.transform.position += Dir * Time.deltaTime;
-            yield return new WaitForSeconds(3);
-        }
+            Bullet.transform.position += Dir * Time.deltaTime * Bullet_speed;
+    }
     }
 }
