@@ -15,6 +15,10 @@ public class Move : MonoBehaviour {
     Vector3 b;
     public GameObject SuperAmor;
     public static bool effect = false; // 아이템 박스 충돌 체크
+    public GameObject Armor;
+    public GameObject Up;
+    public GameObject Down;
+    public GameObject Small;
     // Use this for initialization
     void Start () {
         t = gameObject.GetComponent<Transform>();
@@ -107,9 +111,11 @@ public class Move : MonoBehaviour {
     {
         Random_Item = 0;
         Invincibility_Check = true;
+        Armor.SetActive(true);
         SuperAmor.SetActive(true);
         yield return new WaitForSeconds(5.0f);
         Invincibility_Check = false;
+        Armor.SetActive(false);
         SuperAmor.SetActive(false);
         yield return null;
     }
@@ -125,8 +131,10 @@ public class Move : MonoBehaviour {
     {
         Random_Item = 0;
         Speed = 12;
+        Up.SetActive(true);
         yield return new WaitForSeconds(5.0f);
         Speed = 8;
+        Up.SetActive(false);
         yield return null;
     }
 
@@ -134,8 +142,10 @@ public class Move : MonoBehaviour {
     {
         Random_Item = 0;
         Speed = 5;
+        Down.SetActive(true);
         yield return new WaitForSeconds(5.0f);
         Speed = 8;
+        Down.SetActive(false);
         yield return null;
     }
 
@@ -143,8 +153,10 @@ public class Move : MonoBehaviour {
     {
         Random_Item = 0;
         t.localScale = a;
+        Small.SetActive(true);
         yield return new WaitForSeconds(5.0f);
         t.localScale = b;
+        Small.SetActive(false);
         yield return null;
     }
 }
