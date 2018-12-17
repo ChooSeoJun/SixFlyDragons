@@ -23,8 +23,6 @@ public class Create_Bullet : MonoBehaviour {
     {
         while (true) { 
         Instantiate(Bullet, create_position.transform.position, Quaternion.identity);
-            Vector3 Dir = (target.transform.position - Bullet.transform.position).normalized;
-            Bullet.transform.position += Dir * Time.deltaTime * Bullet_speed;
             yield return new WaitForSeconds(3);
      }
     }
