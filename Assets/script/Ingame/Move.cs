@@ -13,6 +13,8 @@ public class Move : MonoBehaviour {
     Transform t;
     Vector3 a;
     Vector3 b;
+    public GameObject SuperAmor;
+    public static bool effect = false; // 아이템 박스 충돌 체크
     // Use this for initialization
     void Start () {
         t = gameObject.GetComponent<Transform>();
@@ -78,10 +80,10 @@ public class Move : MonoBehaviour {
      void Limit()
     {
         Vector3 pos = Vector3.zero;
-        pos.x = Mathf.Clamp(transform.position.x, -5.5f, 5.5f);
+        pos.x = Mathf.Clamp(transform.position.x, -8.36f,10000);
         pos.y = Mathf.Clamp(transform.position.y, -4, 2);
 
-        transform.position = pos;
+        transform.position = new Vector3(pos.x,pos.y,transform.position.z);
 
     }
 
@@ -89,6 +91,7 @@ public class Move : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Random") // 랜덤박스에 부딪힘
         {
+            effect = true;
             int ran = Random.Range(1, 6);
             Random_Item = ran;
             Destroy(collision.gameObject);
@@ -104,8 +107,10 @@ public class Move : MonoBehaviour {
     {
         Random_Item = 0;
         Invincibility_Check = true;
+        SuperAmor.SetActive(true);
         yield return new WaitForSeconds(5.0f);
         Invincibility_Check = false;
+        SuperAmor.SetActive(false);
         yield return null;
     }
 
@@ -119,26 +124,22 @@ public class Move : MonoBehaviour {
     IEnumerator Speed_up() // 스피드 업
     {
         Random_Item = 0;
-        Speed = 4;
-        Back_Ground.scrollSpeed = 1.5f;
+        Speed = 12;
         yield return new WaitForSeconds(5.0f);
-        Speed = 3;
-        Back_Ground.scrollSpeed = 0.5f;
+        Speed = 8;
         yield return null;
     }
 
     IEnumerator Speed_down() // 스피드 다운
     {
         Random_Item = 0;
-        Speed = 2;
-        Back_Ground.scrollSpeed = 0.5f;
+        Speed = 5;
         yield return new WaitForSeconds(5.0f);
-        Speed = 3;
-        Back_Ground.scrollSpeed = 1.5f;
+        Speed = 8;
         yield return null;
     }
 
-    IEnumerator Size_up() // 사이즈 증가
+    IEnumerator Size_up() // 사이즈 감소
     {
         Random_Item = 0;
         t.localScale = a;
