@@ -333,19 +333,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114028333122982128, guid: 6802e93ce6381cb42b26d36b4e837baa,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: target
       value: 
       objectReference: {fileID: 907697335}
-    - target: {fileID: 114028333122982128, guid: 6802e93ce6381cb42b26d36b4e837baa,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: bullet_speed
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1790048972192960, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
@@ -687,15 +685,133 @@ Prefab:
       propertyPath: m_Name
       value: Plasma_LightBlue_Small_Projectile_Template (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114028333122982128, guid: 6802e93ce6381cb42b26d36b4e837baa,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: target
       value: 
       objectReference: {fileID: 907697335}
-    - target: {fileID: 114028333122982128, guid: 6802e93ce6381cb42b26d36b4e837baa,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: bullet_speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790048972192960, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1693100198
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790048972192960, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_Name
+      value: Plasma_LightBlue_Small_Projectile_Template (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 907697335}
+    - target: {fileID: 0}
+      propertyPath: bullet_speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790048972192960, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1753985504
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -7.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072150980368136, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790048972192960, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_Name
+      value: Plasma_LightBlue_Small_Projectile_Template (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 907697335}
+    - target: {fileID: 0}
+      propertyPath: bullet_speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790048972192960, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6802e93ce6381cb42b26d36b4e837baa, type: 2}
@@ -915,8 +1031,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788acfc2ee8779448b3e24b3014838da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  end: 15
-  offset: 0
 --- !u!64 &2053608676
 MeshCollider:
   m_ObjectHideFlags: 0
