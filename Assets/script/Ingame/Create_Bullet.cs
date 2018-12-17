@@ -7,7 +7,6 @@ public class Create_Bullet : MonoBehaviour {
     public GameObject Bullet;
     public GameObject target;
     Rigidbody rigidbody;
-    public float Bullet_speed = 0f;
     
 	// Use this for initialization
 	void Start () {
@@ -23,7 +22,7 @@ public class Create_Bullet : MonoBehaviour {
     {
         while (true) { 
         Instantiate(Bullet, create_position.transform.position, Quaternion.identity);   
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1);
      }
     }
 }
