@@ -73,8 +73,7 @@ GameObject:
   - component: {fileID: 198290017490997328}
   - component: {fileID: 199329577471802258}
   - component: {fileID: 54646568266346964}
-  - component: {fileID: 114117892869490110}
-  - component: {fileID: 114407157422037794}
+  - component: {fileID: 114260667640731000}
   m_Layer: 0
   m_Name: Plasma_LightBlue_Small_Projectile_Template
   m_TagString: FX
@@ -183,7 +182,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114117892869490110
+--- !u!114 &114260667640731000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,166 +190,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1790048972192960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 538d28f745155f34fba977c5c1026e39, type: 3}
+  m_Script: {fileID: 11500000, guid: 0faa17a73e4a9354fad3464c79f29ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactPrefab: {fileID: 1879272669879180, guid: 2eeb0daa944232844a4ab7bfe23faa67,
-    type: 2}
-  explosionPrefab: {fileID: 0}
-  thrust: 0
-  thisRigidbody: {fileID: 54646568266346964}
-  particleKillGroup: {fileID: 0}
-  LookRotation: 1
-  Missile: 0
-  missileTarget: {fileID: 0}
-  projectileSpeed: 0
-  projectileSpeedMultiplier: 0
-  ignorePrevRotation: 0
-  explodeOnTimer: 0
-  explosionTimer: 0
---- !u!114 &114407157422037794
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1790048972192960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14fe9984834882c43b827e4197192a74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed_custom: 1
-  colorChangeList:
-  - Name: Sprite
-    colored_ParticleSystem:
-    - {fileID: 198865675640445698}
-    Gradient_custom:
-      serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 0.40392157, g: 0.81960785, b: 1, a: 1}
-      key2: {r: 0.019392222, g: 0.28020734, b: 1, a: 0}
-      key3: {r: 0, g: 0.2530048, b: 1, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 13878
-      ctime2: 33539
-      ctime3: 37972
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 27430
-      atime2: 65535
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 4
-      m_NumAlphaKeys: 3
-  - Name: Electricty
-    colored_ParticleSystem:
-    - {fileID: 198742689549752992}
-    Gradient_custom:
-      serializedVersion: 2
-      key0: {r: 0.25735295, g: 0.78320247, b: 1, a: 0}
-      key1: {r: 0.102941155, g: 0.7381257, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 1}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 11486
-      atime2: 42699
-      atime3: 65535
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 4
-  - Name: Glow
-    colored_ParticleSystem:
-    - {fileID: 198613769324198920}
-    Gradient_custom:
-      serializedVersion: 2
-      key0: {r: 0.03529412, g: 0.6, b: 1, a: 0}
-      key1: {r: 0.03529412, g: 0.6, b: 1, a: 0.5647059}
-      key2: {r: 0.11764706, g: 0.74509805, b: 1, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 32565
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 31804
-      atime2: 65535
-      atime3: 65535
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 3
-  - Name: Trail
-    colored_ParticleSystem:
-    - {fileID: 198759222341041552}
-    Gradient_custom:
-      serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 0.40392157, g: 0.81960785, b: 1, a: 1}
-      key2: {r: 0.08627451, g: 0.34509805, b: 0.77254903, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 5975
-      ctime1: 30069
-      ctime2: 65535
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 27430
-      atime2: 65535
-      atime3: 65535
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 3
-      m_NumAlphaKeys: 3
-  applyChanges: 0
-  Keep_applyChanges: 0
 --- !u!198 &198290017490997328
 ParticleSystem:
   m_ObjectHideFlags: 1
