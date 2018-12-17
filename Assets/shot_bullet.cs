@@ -6,8 +6,8 @@ public class shot_bullet : MonoBehaviour {
     Vector3 myposition;
     public GameObject target;
     public float bullet_speed = 0f;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         myposition = transform.position;
 	}
 	
