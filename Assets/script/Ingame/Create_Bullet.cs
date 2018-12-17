@@ -17,12 +17,12 @@ public class Create_Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        
+    }
     IEnumerator CreateBullet()
     {
         while (true) { 
-        Instantiate(Bullet, create_position.transform.position, Quaternion.identity);
+        Instantiate(Bullet, create_position.transform.position, Quaternion.identity);   
             yield return new WaitForSeconds(3);
      }
     }
