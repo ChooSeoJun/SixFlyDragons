@@ -5,7 +5,7 @@ using UnityEngine;
 public class Back_Ground : MonoBehaviour {
     public float end = 0f;
     private new Renderer renderer;
-    public float scrollSpeed = 0f;
+    public static float scrollSpeed = 1f;
     public float offset = 0f;
        
     // Use this for initialization
