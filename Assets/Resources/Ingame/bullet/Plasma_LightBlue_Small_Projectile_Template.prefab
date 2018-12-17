@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 198290017490997328}
   - component: {fileID: 199329577471802258}
   - component: {fileID: 54646568266346964}
-  - component: {fileID: 114260667640731000}
+  - component: {fileID: 114028333122982128}
   m_Layer: 0
   m_Name: Plasma_LightBlue_Small_Projectile_Template
   m_TagString: FX
@@ -118,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1790048972192960}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.2939332, y: -0.86625046, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4459373937864898}
@@ -182,7 +182,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114260667640731000
+--- !u!114 &114028333122982128
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,6 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0faa17a73e4a9354fad3464c79f29ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  bullet_speed: 0
 --- !u!198 &198290017490997328
 ParticleSystem:
   m_ObjectHideFlags: 1
