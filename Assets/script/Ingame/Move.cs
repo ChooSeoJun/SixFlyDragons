@@ -7,6 +7,7 @@ public class Move : MonoBehaviour {
     public static int Random_Item = 0; // 랜덤 아이템의 상태 체크 
     public static bool Invincibility_Check = false; // 무적상태 체크
     public float Speed = 0f;
+    public GameObject Skill_motion;
     public Slider HpBar;
     Vector2 MoveVelocity; 
     Rigidbody2D rigid;
@@ -91,7 +92,7 @@ public class Move : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision) // 부딪혔을때 이벤트
+    void OnTriggerEnter2D(Collider2D collision) // 부딪혔을때 이벤트
     {
         if(collision.gameObject.tag == "Random") // 랜덤박스에 부딪힘
         {
@@ -100,10 +101,22 @@ public class Move : MonoBehaviour {
             Random_Item = ran;
             Destroy(collision.gameObject);
         }
-
-        if(Invincibility_Check == false)
+        if (Invincibility_Check == false)
         {
-
+            if (collision.gameObject.tag == "FX")
+            {
+                if (Skill.skill_check == true)
+                {
+                    Skill_motion.SetActive(false);
+                    Destroy(collision.transform.parent.gameObject);
+                    Skill.skill_check = false;
+                }
+                else
+                {
+                    HpBar.value -= 20;
+                    Destroy(collision.transform.parent.gameObject);
+                }
+            }
         }
     }
 
