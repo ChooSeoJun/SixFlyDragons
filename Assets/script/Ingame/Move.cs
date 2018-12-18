@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Move : MonoBehaviour {
     public static int Random_Item = 0; // 랜덤 아이템의 상태 체크 
     public static bool Invincibility_Check = false; // 무적상태 체크
-    public float Speed = 0f;
+    public static bool nd_check = false;
+    public static float Speed = 8f;
     public GameObject Skill_motion;
     public Slider HpBar;
     Vector2 MoveVelocity; 
@@ -15,6 +16,7 @@ public class Move : MonoBehaviour {
     Vector3 a;
     Vector3 b;
     public GameObject SuperAmor;
+    public GameObject Nd_motion;
     public static bool effect = false; // 아이템 박스 충돌 체크
     public GameObject Armor;
     public GameObject Up;
@@ -28,13 +30,13 @@ public class Move : MonoBehaviour {
         rigid = GetComponent<Rigidbody2D>();
         if (Cchar_Mgr.ch[0].ch_use == true)
         {
-            HpBar.maxValue = Cchar_Mgr.ch[0].ch_hp;
-            HpBar.value = Cchar_Mgr.ch[0].ch_hp;
+            HpBar.maxValue = Cchar_Mgr.ch[0].ch_hp + ShowEQ.maxValue;
+            HpBar.value = Cchar_Mgr.ch[0].ch_hp + ShowEQ.maxValue;
         }
         else if (Cchar_Mgr.ch[1].ch_use == true)
         {
-            HpBar.maxValue = Cchar_Mgr.ch[1].ch_hp;
-            HpBar.value = Cchar_Mgr.ch[1].ch_hp;
+            HpBar.maxValue = Cchar_Mgr.ch[1].ch_hp + ShowEQ.maxValue;
+            HpBar.value = Cchar_Mgr.ch[1].ch_hp + ShowEQ.maxValue;
         }
         else if (Cchar_Mgr.ch[2].ch_use == true)
         {
@@ -101,9 +103,32 @@ public class Move : MonoBehaviour {
             Random_Item = ran;
             Destroy(collision.gameObject);
         }
-        if (Invincibility_Check == false)
+        else if (Invincibility_Check == false)
         {
-            if (collision.gameObject.tag == "FX")
+            if (ShowEQ.nd_up > 0)
+            {
+                int ran = Random.Range(1, 10);
+                if (ran == 3)
+                {
+                    nd_check = true;
+                    Destroy(collision.transform.parent.gameObject);
+                }
+                else if (collision.gameObject.tag == "FX")
+                {
+                    if (Skill.skill_check == true)
+                    {
+                        Skill_motion.SetActive(false);
+                        Destroy(collision.transform.parent.gameObject);
+                        Skill.skill_check = false;
+                    }
+                    else
+                    {
+                        HpBar.value -= ShowEQ.hp_down;
+                        Destroy(collision.transform.parent.gameObject);
+                    }
+                }
+            }
+            else if (collision.gameObject.tag == "FX")
             {
                 if (Skill.skill_check == true)
                 {
@@ -113,7 +138,7 @@ public class Move : MonoBehaviour {
                 }
                 else
                 {
-                    HpBar.value -= 20;
+                    HpBar.value -= ShowEQ.hp_down;
                     Destroy(collision.transform.parent.gameObject);
                 }
             }

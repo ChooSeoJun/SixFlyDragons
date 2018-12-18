@@ -7,6 +7,7 @@ public class Create_Bullet : MonoBehaviour {
     public GameObject Bullet;
     public GameObject target;
     Rigidbody rigidbody;
+    public bool check = true;
     
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,15 @@ public class Create_Bullet : MonoBehaviour {
     {
         while (true) { 
         Instantiate(Bullet, create_position.transform.position, Quaternion.identity);   
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1f);
+            if (shot_bullet.size >= 2)
+                check = true;
+            else if (shot_bullet.size <= -2)
+                check = false;
+            if (check == true)
+                shot_bullet.size -= 0.4f;
+            else
+                shot_bullet.size += 0.4f;
      }
     }
 }
