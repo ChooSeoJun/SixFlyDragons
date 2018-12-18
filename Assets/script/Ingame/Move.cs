@@ -78,7 +78,6 @@ public class Move : MonoBehaviour {
     }
     void Ch_Move()
     {
-        
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
 
         MoveVelocity = moveInput.normalized * Speed;
