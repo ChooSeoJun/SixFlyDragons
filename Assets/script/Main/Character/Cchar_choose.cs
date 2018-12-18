@@ -6,7 +6,7 @@ public class Cchar_choose : MonoBehaviour {
      GameObject GameObject;
     // Use this for initialization
     void Start () {
-       
+
     }
 	
 	// Update is called once per frame

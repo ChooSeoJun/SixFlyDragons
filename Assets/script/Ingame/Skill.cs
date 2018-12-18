@@ -6,6 +6,7 @@ public class Skill : MonoBehaviour {
     public GameObject Skill_Icon;
     public GameObject Skill_motion;
     public static bool skill_check = false;
+    public GameObject nd_motion;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,6 +14,10 @@ public class Skill : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Move.nd_check == true)
+        {
+            StartCoroutine(check());
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if(Skill_Icon.GetComponent<Image>().fillAmount == 1)
@@ -24,5 +29,14 @@ public class Skill : MonoBehaviour {
         }
         Skill_Icon.GetComponent<Image>().fillAmount += 0.001f;
 
+    }
+
+    IEnumerator check()
+    {
+        Move.nd_check = false;
+        nd_motion.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        nd_motion.SetActive(false);
+        yield return null;
     }
 }
