@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class GameClear : MonoBehaviour {
     public GameObject clearGUI;
     public GameObject failGUI;
     public Text[] texts;
     public static float time = 0;
     public static float record = 0;
-    
+    public static float[] Best = new float[5]; 
     public Text timerText;
     bool bPauseGame = false;
   
@@ -41,7 +41,6 @@ public class GameClear : MonoBehaviour {
         if (collider.tag == "Player")
         {
             clearGUI.SetActive(true);
-
             Time.timeScale = 0; 
 
             record = time;
