@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainPage.unity
     guid: fec28cb1bc5847d4493f783a14b8350a
   - enabled: 1
-    path: Assets/Scenes/InGame.unity
-    guid: af2c2655e636b5540a33fd54b77cac5d
+    path: Assets/Scenes/Stage_Test.unity
+    guid: 9163676f94ebec94081ad954b84c393e
   m_configObjects: {}
