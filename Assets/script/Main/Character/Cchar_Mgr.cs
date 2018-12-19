@@ -23,7 +23,8 @@ public class Cchar_Mgr : MonoBehaviour {
             c.ch_image = Resources.Load<Sprite>("CH/CH_" + i);
             ch.Add(c);
         }
-        
+        ch[0].ch_use = true;
+
     }
     
 }
