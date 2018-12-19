@@ -9,4 +9,5 @@ public class Global : MonoBehaviour {
     public static int exp = 1; // 레벨
     public static long exp_value = 0; // 레벨 수치화
     public static int stage = 1; // 스테이지 잠금
+    public static float[] Best = { 5000000 ,500000,500000,500000,500000}; // 스테이지별 최고 기록
 }

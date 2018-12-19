@@ -22,6 +22,7 @@ public class Move : MonoBehaviour {
     public GameObject Up;
     public GameObject Down;
     public GameObject Small;
+    public GameObject PauseGUI;
     // Use this for initialization
     void Start () {
         t = gameObject.GetComponent<Transform>();
@@ -48,7 +49,12 @@ public class Move : MonoBehaviour {
 	void Update () {
         Ch_Move();
         Limit();
-        if(Random_Item != 0) // 랜덤 아이템 체크
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0;
+            PauseGUI.SetActive(true);
+        }
+        if (Random_Item != 0) // 랜덤 아이템 체크
         {
             switch (Random_Item)
             {
